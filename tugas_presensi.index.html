@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Menentukan bahwa ini adalah dokumen HTML5 -->
+
+<html lang="id">
+<!-- Tag utama HTML, lang="id" artinya bahasa Indonesia -->
+
+<head>
+    <!-- Bagian HEAD (pengaturan, tidak tampil di halaman) -->
+
+    <meta charset="UTF-8">
+    <!-- Mengatur karakter agar semua huruf terbaca dengan benar -->
+
+    <title>Manajemen Mahasiswa</title>
+    <!-- Judul yang muncul di tab browser -->
+
+    <style>
+        /* CSS digunakan untuk mengatur tampilan halaman */
+
+        /* Mengatur tampilan body (halaman utama) */
+        body {
+            font-family: Arial, sans-serif; /* Jenis font */
+            margin: 0; /* Menghilangkan jarak luar */
+            padding: 0; /* Menghilangkan jarak dalam */
+            background: linear-gradient(135deg, #0f2027, #2c5364); /* Background gradasi */
+            height: 100vh; /* Tinggi layar penuh */
+            display: flex; /* Menggunakan flexbox */
+            justify-content: center; /* Tengah horizontal */
+            align-items: center; /* Tengah vertikal */
+        }
+
+        /* Container utama (kotak isi) */
+        .container {
+            width: 80%; /* Lebar 80% layar */
+            max-width: 800px; /* Maksimal lebar */
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Warna kotak */
+            padding: 25px; /* Jarak dalam */
+            border-radius: 15px; /* Sudut melengkung */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Bayangan */
+            color: white; /* Warna teks */
+        }
+
+        /* Judul */
+        h2 {
+            margin-bottom: 15px; /* Jarak bawah */
+        }
+
+        /* Grup input agar sejajar */
+        .form-group {
+            display: flex; /* Membuat sejajar */
+            gap: 10px; /* Jarak antar elemen */
+            margin-bottom: 10px;
+        }
+
+        /* Input, select, textarea */
+        .form-group input,
+        .form-group select,
+        textarea {
+            flex: 1; /* Lebar sama rata */
+            padding: 10px; /* Jarak dalam */
+            border-radius: 5px; /* Sudut halus */
+            border: none; /* Hilangkan garis */
+            outline: none; /* Hilangkan garis saat klik */
+            background: rgba(255,255,255,0.9); /* Warna putih transparan */
+        }
+
+        /* Textarea khusus */
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Radio button */
+        .radio-group {
+            margin-bottom: 10px;
+        }
+
+        .radio-group label {
+            margin-right: 15px;
+        }
+
+        /* Tombol */
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Tombol submit */
+        .btn-submit {
+            background: #00c6ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Tombol reset */
+        .btn-reset {
+            background: #ff4b5c;
+            color: white;
+        }
+
+        /* Garis pemisah */
+        hr {
+            margin: 20px 0;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        /* Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Menggabungkan garis */
+            background: rgba(255,255,255,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+</html>
