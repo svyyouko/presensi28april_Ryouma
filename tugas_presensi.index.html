@@ -17,111 +17,113 @@
         /* CSS digunakan untuk mengatur tampilan halaman */
 
         /* Mengatur tampilan body (halaman utama) */
-        body {
-            font-family: Arial, sans-serif; /* Jenis font */
-            margin: 0; /* Menghilangkan jarak luar */
-            padding: 0; /* Menghilangkan jarak dalam */
-            background: linear-gradient(135deg, #0f2027, #2c5364); /* Background gradasi */
-            height: 100vh; /* Tinggi layar penuh */
-            display: flex; /* Menggunakan flexbox */
-            justify-content: center; /* Tengah horizontal */
-            align-items: center; /* Tengah vertikal */
+       body {
+            font-family: Arial, sans-serif; /* Mengatur jenis huruf semua teks menjadi Arial. Jika perangkat pengguna tidak memiliki Arial, akan diganti ke jenis sans-serif standar */
+            margin: 0; /* Menghapus jarak default (margin) bawaan browser dari bagian luar elemen body agar area desain menempel rapat di tepi layar tanpa sela */
+            padding: 0; /* Menghapus ruang kosong default (padding) dari bagian dalam elemen body */
+            background: linear-gradient(135deg, #0f2027, #2c5364); /* Mewarnai latar belakang layar dengan efek gradasi dua warna yang ditarik secara miring pada sudut 135 derajat (dari warna gelap ke biru kehijauan) */
+            height: 100vh; /* Mengatur tinggi area body secara mutlak sebesar 100% dari tinggi layar perangkat yang digunakan pengguna (100 Viewport Height) */
+            display: flex; /* Mengaktifkan sistem tata letak "flexbox" yang sangat berguna untuk mengatur dan memposisikan elemen-elemen di dalamnya dengan mudah */
+            justify-content: center; /* Menggunakan fitur flexbox untuk mendorong semua konten di dalam body agar berada persis di tengah layar secara horizontal (kiri-kanan) */
+            align-items: center; /* Menggunakan fitur flexbox untuk menempatkan semua konten di dalam body agar berada persis di tengah layar secara vertikal (atas-bawah) */
         }
 
-        /* Container utama (kotak isi) */
+        /* --- Mengatur gaya untuk elemen HTML apa pun yang diberi identitas class="container" (biasanya kotak utama pembungkus konten) --- */
         .container {
-            width: 80%; /* Lebar 80% layar */
-            max-width: 800px; /* Maksimal lebar */
-            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Warna kotak */
-            padding: 25px; /* Jarak dalam */
-            border-radius: 15px; /* Sudut melengkung */
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Bayangan */
-            color: white; /* Warna teks */
+            width: 80%; /* Menetapkan lebar kotak container agar memakan ruang sebesar 80% dari total lebar layar yang tersedia */
+            max-width: 800px; /* Memberikan batasan maksimal lebar kotak sebesar 800 piksel. Ini mencegah kotak melar terlalu panjang meskipun dibuka di layar monitor yang sangat besar */
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Memberikan warna latar belakang kotak dengan efek gradasi warna biru tua ke biru terang */
+            padding: 25px; /* Memberikan ruang kosong (bantalan) sebesar 25 piksel di bagian dalam tepi kotak, agar teks atau konten di dalamnya tidak menempel pada garis pinggir kotak */
+            border-radius: 15px; /* Memotong/melengkungkan keempat sudut kotak container sebesar 15 piksel agar tidak terlihat tajam/kaku */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Menambahkan efek bayangan di belakang kotak. Angka-angkanya mengatur sumbu X (0), sumbu Y (10px ke bawah), tingkat blur (25px), dan warnanya adalah hitam dengan transparansi 40% */
+            color: white; /* Mengubah warna semua teks standar yang ada di dalam kotak container ini menjadi warna putih */
         }
 
-        /* Judul */
+        /* --- Mengatur gaya untuk tag heading level 2 (Judul sub-bagian) --- */
         h2 {
-            margin-bottom: 15px; /* Jarak bawah */
+            margin-bottom: 15px; /* Memberikan jarak kosong sebesar 15 piksel di bagian bawah teks judul ini agar tidak terlalu menempel dengan elemen di bawahnya */
         }
 
-        /* Grup input agar sejajar */
+        /* --- Mengatur tata letak untuk elemen pembungkus form (biasanya diberi class="form-group") --- */
         .form-group {
-            display: flex; /* Membuat sejajar */
-            gap: 10px; /* Jarak antar elemen */
-            margin-bottom: 10px;
+            display: flex; /* Mengaktifkan mode flexbox agar inputan atau elemen di dalamnya secara otomatis berjejer sejajar menyamping */
+            gap: 10px; /* Memberikan jarak sela yang rapi sebesar 10 piksel di antara elemen-elemen yang berjejer menyamping tadi */
+            margin-bottom: 10px; /* Memberikan jarak kosong sebesar 10 piksel di bagian bawah grup ini untuk memisahkannya dengan baris grup form selanjutnya */
         }
 
-        /* Input, select, textarea */
+        /* --- Mengatur gaya seragam untuk kotak input teks biasa, menu pilihan dropdown (select), dan kotak teks paragraf (textarea) khusus yang ada di dalam form-group --- */
         .form-group input,
         .form-group select,
         textarea {
-            flex: 1; /* Lebar sama rata */
-            padding: 10px; /* Jarak dalam */
-            border-radius: 5px; /* Sudut halus */
-            border: none; /* Hilangkan garis */
-            outline: none; /* Hilangkan garis saat klik */
-            background: rgba(255,255,255,0.9); /* Warna putih transparan */
+            flex: 1; /* Menginstruksikan elemen-elemen ini untuk secara otomatis menyesuaikan ukuran dan membagi sisa ruang secara adil (memenuhi baris secara proporsional) */
+            padding: 10px; /* Memberikan bantalan ruang di bagian dalam area ketik sebesar 10 piksel agar kursor dan teks tidak terlalu mepet ke garis tepi form */
+            border-radius: 5px; /* Melengkungkan sedikit ujung-ujung kotak input sebesar 5 piksel agar terlihat lebih modern */
+            border: none; /* Menghilangkan garis tepi/bingkai bawaan browser dari kotak form */
+            outline: none; /* Menghilangkan efek garis sorot tebal yang biasanya muncul otomatis ketika kotak input tersebut sedang diklik oleh pengguna */
+            background: rgba(255,255,255,0.9); /* Mengatur warna dasar dalam kotak menjadi putih yang disamarkan (memiliki tingkat transparansi 90%, sehingga sedikit tembus pandang) */
         }
 
-        /* Textarea khusus */
+        /* --- Aturan khusus yang menimpa/menambahkan fungsi hanya pada elemen textarea (kotak input teks yang panjang) --- */
         textarea {
-            width: 100%;
-            margin-bottom: 10px;
+            width: 100%; /* Memaksa kotak teks textarea untuk melebar penuh hingga memakan 100% ruang horizontal pada tempat ia berada */
+            margin-bottom: 10px; /* Memberikan jarak dorong ke bawah sebesar 10 piksel supaya tidak menempel dengan elemen di bawahnya */
         }
 
-        /* Radio button */
+        /* --- Mengatur ruang untuk wadah pilihan radio button (opsi dengan titik/lingkaran) --- */
         .radio-group {
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Memberikan jarak renggang di bagian bawah kelompok radio button ini sebesar 10 piksel */
         }
 
+        /* --- Mengatur spasi untuk teks keterangan (label) yang mendampingi titik radio button --- */
         .radio-group label {
-            margin-right: 15px;
+            margin-right: 15px; /* Mendorong dan memberikan ruang kosong sebesar 15 piksel di sebelah kanan teks, agar tidak saling tabrak dengan bulatan opsi radio berikutnya */
         }
 
-        /* Tombol */
+        /* --- Mengatur gaya fundamental untuk seluruh tombol (elemen button) yang ada di halaman --- */
         button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 10px 15px; /* Mengatur area klik dan jarak dalam tombol: 10 piksel untuk ketebalan atas-bawah, dan 15 piksel untuk kelebaran kiri-kanan */
+            border: none; /* Menghapus bingkai kasar bawaan tombol standar */
+            border-radius: 5px; /* Menghaluskan ujung sudut kotak tombol dengan radius lengkungan 5 piksel */
+            cursor: pointer; /* Memberikan isyarat interaktif dengan mengubah bentuk panah mouse menjadi bentuk "tangan yang menunjuk" ketika disorot ke atas tombol */
         }
 
-        /* Tombol submit */
+        /* --- Gaya warna khusus untuk tombol konfirmasi/pengirim data yang memiliki class="btn-submit" --- */
         .btn-submit {
-            background: #00c6ff;
-            color: white;
-            font-weight: bold;
+            background: #00c6ff; /* Mewarnai kotak tombol submit dengan warna biru cerah (cyan) */
+            color: white; /* Mewarnai tulisan yang ada di dalam tombol tersebut menjadi putih */
+            font-weight: bold; /* Menebalkan ketebalan teks (bold) pada tombol agar terlihat lebih penting dan menonjol */
         }
 
-        /* Tombol reset */
+        /* --- Gaya warna khusus untuk tombol pembatal/pengulang form yang memiliki class="btn-reset" --- */
         .btn-reset {
-            background: #ff4b5c;
-            color: white;
+            background: #ff4b5c; /* Mewarnai kotak tombol reset dengan nuansa warna merah bata/pink pekat sebagai indikator untuk berhati-hati/hapus data */
+            color: white; /* Mewarnai tulisan di dalam tombol menjadi putih */
         }
 
-        /* Garis pemisah */
+        /* --- Mengatur tampilan tag hr (Horizontal Rule / Garis Pemisah mendatar) --- */
         hr {
-            margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.5);
+            margin: 20px 0; /* Memberikan ruang dorong di atas dan di bawah garis sejauh 20 piksel, sementara sisi kiri dan kanannya dibiarkan 0 (tidak ada jarak) */
+            border: 1px solid rgba(255,255,255,0.5); /* Mendefinisikan wujud garis itu sendiri: ketebalan 1 piksel, jenis garis lurus tak terputus (solid), berwarna putih dengan visibilitas transparansi 50% */
         }
 
-        /* Tabel */
+        /* --- Mengatur kerangka untuk semua tabel data --- */
         table {
-            width: 100%;
-            border-collapse: collapse; /* Menggabungkan garis */
-            background: rgba(255,255,255,0.1);
+            width: 100%; /* Memerintahkan tabel agar merentang penuh selebar 100% dari ruang kotak pelindungnya */
+            border-collapse: collapse; /* Menginstruksikan browser agar menggabungkan garis ganda di antara sel/kotak tabel menjadi satu garis tunggal, membuatnya terlihat lebih rapi */
+            background: rgba(255,255,255,0.1); /* Memberi pewarnaan dasar pada bidang belakang tabel berupa warna putih yang sangat tipis (transparansi 10%) */
         }
 
+        /* --- Mengatur gaya selokan/kotak yang ada dalam tabel, yaitu judul kolom (th) dan data biasa (td) --- */
         th, td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding: 10px; /* Memastikan isi teks dari tabel tidak menempel pada garis kotak sel tabel dengan memberi bantalan jarak dalam 10 piksel */
+            text-align: center; /* Menyelaraskan seluruh posisi teks agar tegak berpusat di tengah-tengah kolom secara presisi */
+            border-bottom: 1px solid rgba(255,255,255,0.3); /* Hanya memberikan garis mendatar di bagian paling bawah setiap sel/baris sebesar 1 piksel, solid, dan berwarna putih pudar (transparansi 30%) */
         }
 
+        /* --- Aturan pengkhususan tampilan pada sel baris judul kolom (th - table header) --- */
         th {
-            font-weight: bold;
+            font-weight: bold; /* Menebalkan seluruh tulisan nama-nama kolom pada bagian paling atas tabel agar lebih mudah dibedakan dengan data isiannya */
         }
-
     </style>
 </head>
 </html>
